@@ -40,7 +40,7 @@ $('document').ready(function(){
     }
     
 
-    // Snack 2
+// Snack 2
 // Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
 // Nome sarà l'unica proprietà da compilare, le altre saranno tutte settate a 0.
 // Generare numeri random al posto degli 0 nelle proprietà:
@@ -93,6 +93,40 @@ for(let i = 0; i < updatedTeams.length; i++){
 }
 
 console.log('New results', newArrayResults);
+
+
+
+const myArray = ["Paolo", "Lorenzo", "Fabio", "Lillo", "Luna"];
+
+ let min = parseInt( prompt("Inserisci un numero tra 0 e 5"));
+while(isNaN(min) || min < 0 && min > myArray.length){
+    min = parseInt( prompt("Inserisci un numero tra 0 e 5"));
+};
+
+ let max = parseInt( prompt("Inserisci un numero tra 0 e 5"));
+while(isNaN(max) || max < min || max > myArray.length){
+    max = parseInt( prompt("Inserisci un numero tra 0 e 5"));
+};
+
+
+
+let myArrayX = [];
+
+function filterArray(arr, min, max){
+    for( let i = 0; i < arr.length; i++){
+        const newArray = arr[i];
+        if(min <= i && max >= i){
+            newArray.push(newArray);
+        };
+    };
+};
+
+
+filterArray(myArrayX, min, max);
+
+newArrayFilter = myArray.filter((element, index) =>{
+    return min <= index && max >= index;
+});
 
 
     //END DOC READY
